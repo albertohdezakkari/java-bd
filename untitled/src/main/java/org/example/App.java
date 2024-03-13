@@ -15,7 +15,11 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        MotorSQL motorSQLPostgre = new MotorSQLPostgre();
+         MotorSQL motorSQLPostgre = new MotorSQLPostgre();
+         // PISTA PARA EXAMEN
+            //MotorSQL motorSQLPostgre = Factory.getInstance("POSTGRE");
+        //
+
         // MotorSQL motorSQLPostgre = new MotorSQLOracle();
         // MotorSQL motorSQLPostgre = new MotorSQLAurora();
         Repository<Pelicula> repPostgree = new RepositoryDB(motorSQLPostgre);

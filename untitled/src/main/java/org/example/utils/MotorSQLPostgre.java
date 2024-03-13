@@ -27,7 +27,6 @@ public class MotorSQLPostgre extends MotorSQL {
             } else {
                 System.out.println("Fallo al conectar con la base de datos.");
             }
-            super.st = this.conn.createStatement();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -54,6 +53,8 @@ public class MotorSQLPostgre extends MotorSQL {
     @Override
     public ResultSet ejecutarQuery(String SQL) {
         try {
+            super.st = this.conn.createStatement();
+            // Línea de comandos
             super.rs = this.st.executeQuery(SQL);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -64,6 +65,7 @@ public class MotorSQLPostgre extends MotorSQL {
     public int ejecutarSentencia(String SQL) {
         int filasModificadas = 0;
         try {
+            super.st = this.conn.createStatement();
             filasModificadas = this.st.executeUpdate(SQL);
         } catch (SQLException e) {
             throw new RuntimeException(e);

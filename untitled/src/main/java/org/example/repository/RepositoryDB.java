@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RepositoryDB implements Repository<Pelicula>{
-    private static final String SQL_SELECT = "SELECT id, titulo, descripcion, fecha_lanzamiento, imagen, creado_en FROM public.peliculas ";
+    private static final String SQL_SELECT = "SELECT" + Pelicula.ID +" titulo, descripcion, fecha_lanzamiento, imagen, creado_en FROM public.peliculas ";
     private MotorSQL motorSQL;
 
     public RepositoryDB(MotorSQL motorSQL){

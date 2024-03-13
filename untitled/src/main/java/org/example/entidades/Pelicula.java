@@ -1,8 +1,11 @@
 package org.example.entidades;
 
 public class Pelicula {
+    public static final String ID ="ID";
     private int id;
+    public static final String TITULO ="TITULO";
     private String titulo;
+    public static final String SINOPSIS ="SINOPSIS";
     private String sinopsis;
 
     public Pelicula() {
